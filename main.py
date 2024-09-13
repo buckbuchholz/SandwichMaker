@@ -3,6 +3,7 @@ class SandwichMachine:
         """Initialize machine resources."""
         self.machine_resources = machine_resources
 
+    # This function checks if there are enough resources to make the sandwich.
     def check_resources(self, ingredients):
         """Returns True if the order can be made, False if ingredients are insufficient."""
         for item, amount in ingredients.items():
@@ -11,6 +12,7 @@ class SandwichMachine:
                 return False
         return True
 
+    # This function processes the coins entered by the user.
     def process_coins(self):
         """Returns the total calculated from coins inserted."""
         print("Please insert coins.")
@@ -35,6 +37,7 @@ class SandwichMachine:
             print("Exact amount. No change required.")
             return True
 
+    # This function deducts the required ingredients from the machine resources.
     def make_sandwich(self, sandwich_size, order_ingredients):
         """Deduct the required ingredients from the resources."""
         for item, amount in order_ingredients.items():
